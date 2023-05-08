@@ -24,7 +24,7 @@ The API documentation can be found [here](https://dev.to-clone-backend.herokuapp
 1. Clone this repository: `git clone https://github.com/MaestroMiyagi/Kodemia-24JS-Dev.to-Back-End-Challenge`
 2. Install the dependencies: `npm install`
 3. Create a `.env` file at the root of the project and add the required environment variables (see `.env.example` for an example)
-4. Start the server: `npm start`
+4. Start the server: `npm start or npm dev if you want to use nodemon`
 
 ## License
 
@@ -32,4 +32,7 @@ This project is licensed under the [MIT license](LICENSE).
 
 ### Authors
 
-- [Your Name](https://github.com/yourusername)
+- [Jesús Mendoza](https://github.com/JesusMendoza815)
+- [Kim Raco](https://github.com/KimRaco)
+- [Manuel Dominguez](https://github.com/ETERNALPSY)
+- [Iyari Maldonado](https://github.com/MaestroMiyagi)

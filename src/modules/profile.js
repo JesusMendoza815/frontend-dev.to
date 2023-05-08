@@ -1,3 +1,5 @@
+import { BASE_URL } from "../constants/urls.js"
+
 let formButton = document.getElementById('form__button')
 let fields = document.querySelectorAll("form .form-control")
 let profileName = document.getElementById("profile_name")
@@ -24,7 +26,7 @@ const populateData = async () => {
     try {
         const userData = getTokenPayload(token)
         let response = await fetch(
-            `http://localhost:8080/users/${userData._id}`, {
+            `${BASE_URL}/users/${userData._id}`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +37,7 @@ const populateData = async () => {
         let { name, bio } = responseJson.data
         localStorage.setItem("data", JSON.stringify(responseJson.data))
 
-        profileName != null ? profileName.textContent = name : null; 
+        profileName != null ? profileName.textContent = name : null ; 
         bioDom != null ? bioDom.textContent = bio : null; 
 
         nameToEdit != null ? nameToEdit.value = name : null;
@@ -63,7 +65,7 @@ const newDataPatch = async (newData) => {
     try {
         const userData = getTokenPayload(token)
         let response = await fetch(
-            `http://localhost:8080/users/${userData._id}`, {
+            `${BASE_URL}/users/${userData._id}`, {
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${token}`,
